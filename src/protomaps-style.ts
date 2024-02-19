@@ -1,6 +1,3 @@
-// I was having trouble importing this directly from the "protomaps-themes-base"
-// npm library so I copied and pasted this from the library
-
 function nolabels_layers(source: string, t: Record<string, string>) {
     return [
         {
