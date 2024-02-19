@@ -1,0 +1,30 @@
+{
+  "name": "astro-maplibre-overpass",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.4",
+    "@astrojs/node": "^8.2.0",
+    "@astrojs/react": "^3.0.10",
+    "@turf/bbox": "^6.5.0",
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "astro": "^4.4.0",
+    "geojson": "^0.5.0",
+    "maplibre-gl": "^4.0.1",
+    "openai": "^4.28.0",
+    "osmtogeojson": "^3.0.0-beta.5",
+    "overpass-ts": "^4.3.8",
+    "protomaps-themes-base": "^2.0.0-alpha.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.3.3"
+  }
+}
