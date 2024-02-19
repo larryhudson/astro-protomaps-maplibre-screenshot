@@ -1,19 +1,5 @@
 ---
-import { getSearchResults } from "@src/search";
 import Map from "@src/components/Map.tsx";
-
-const query = Astro.url.searchParams.get("query");
-const searchType = Astro.url.searchParams.get("type");
-const hideSearch = Astro.url.searchParams.get("hide-search");
-
-let searchResultsGeoJson = null;
-
-if (query) {
-	searchResultsGeoJson = await getSearchResults({
-		query,
-		searchType,
-	});
-}
 ---
 
 <html lang="en">
@@ -22,9 +8,9 @@ if (query) {
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>astro-protomaps-maplibre-screenshot</title>
 	</head>
 	<body>
-		<Map geojson={searchResultsGeoJson} {hideSearch} client:load />
+		<Map client:load />
 	</body>
 </html>
