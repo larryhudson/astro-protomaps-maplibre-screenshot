@@ -114,10 +114,9 @@ function updateGeoJsonLayer(map: maplibregl.Map, sourceName: string, features: F
     switch (featureType) {
         case "Point":
         case "MultiPoint":
-            map.loadImage('/map-assets/pin-marker.png', function (error, image) {
-                if (error) throw error;
+            map.loadImage('/map-assets/pin-marker.png').then(image => {
                 if (!image) throw new Error("Image not loaded")
-                map.addImage('pin', image);
+                map.addImage('pin', image.data);
                 map.addLayer({
                     id: layerName,
                     type: 'symbol',
